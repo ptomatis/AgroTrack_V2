@@ -1,0 +1,7 @@
+node_modules/
+data/consultas.txt
+.DS_Store
+.env
+*.log
+dist/
+tmp/

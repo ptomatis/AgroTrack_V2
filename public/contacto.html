@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AgroTrack | Contacto</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>AgroTrack</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="contacto.html" class="activo">Contacto</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Formulario de contacto</h2>
+      <form action="/contacto/cargar" method="POST" class="formulario">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Mensaje:</label>
+        <textarea name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <p><a href="/contacto/listar">Ver consultas registradas</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AgroTrack | By Pablo Tomatis</p>
+  </footer>
+</body>
+</html>

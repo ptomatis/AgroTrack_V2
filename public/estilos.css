@@ -1,0 +1,122 @@
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  background-color: #f5f8f4;
+  color: #333;
+}
+
+header {
+  background-color: #2f6d3e;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a.activo {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #2f6d3e;
+}
+
+ul.productos {
+  list-style: none;
+  padding: 0;
+}
+
+ul.productos li {
+  background: #e9f4ec;
+  border-left: 5px solid #2f6d3e;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formulario button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #2f6d3e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #3e8d4c;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+
+/* ==== Estilos para páginas de error ==== */
+main.error {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+main.error h2 {
+  font-size: 2em;
+  color: #a33;
+  margin-bottom: 10px;
+}
+
+main.error p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.boton-volver {
+  background-color: #2f6d3e;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.boton-volver:hover {
+  background-color: #3e8d4c;
+}
+
+

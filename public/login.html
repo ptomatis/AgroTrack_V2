@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AgroTrack | Login</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>AgroTrack</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="login.html" class="activo">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Iniciar sesión de demostración</h2>
+      <form action="/auth/recuperar" method="POST" class="formulario">
+        <label>Usuario:</label>
+        <input type="text" name="usuario" required>
+
+        <label>Clave:</label>
+        <input type="password" name="clave" required>
+
+        <button type="submit">Ingresar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AgroTrack | By Pablo Tomatis</p>
+  </footer>
+</body>
+</html>

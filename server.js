@@ -1,22 +1,26 @@
-const http = require('http');  // Este modulo nos permite crear el servidor HTTP de forma nativa.
-const url = require('url');    // Este modulo nos permite parsear URLs, para sepaerar rutas, parametros, etc.
-const { route } = require('./lib/router');   // Importamos la funcion route que maneja el enrutamiento de las solicitudes.
+const express = require('express');  // Framework web para Node.js
+const { setupRoutes } = require('./lib/router');   // Importamos la funcion que configura las rutas
 
-const PORT = 8888;    // Aca seteamos el puerto del servidor.
+const app = express();  // Creamos la aplicación Express
+const PORT = 8888;      // Aca seteamos el puerto del servidor.
 
+// Middleware para parsear el body de las peticiones POST (application/x-www-form-urlencoded)
+app.use(express.urlencoded({ extended: true, limit: '50kb' }));
 
-// Creamos el servidor HTTP, pasandole una funcion que maneja las solicitudes entrantes.
-const server = http.createServer(async (req, res) => {
-  try {
-    const { pathname } = url.parse(req.url, true);
-    await route(req, res, pathname);    // Llamamos a la funcion route para manejar la solicitud.
-  } catch (e) {
-    // en caso de excepción no controlada
-    res.writeHead(500, { 'Content-Type': 'text/html; charset=utf-8' });
-    res.end('<h1>Error 500</h1>');
-  }
+// Configuramos las rutas de la aplicación
+setupRoutes(app);
+
+// Middleware para manejar errores no controlados
+app.use((err, req, res, next) => {
+  console.error('Error no controlado:', err);
+  res.status(500).sendFile('500.html', { root: './public' }, (fileErr) => {
+    if (fileErr) {
+      res.status(500).send('<h1>Error 500</h1>');
+    }
+  });
 });
 
-server.listen(PORT, () => {                     //Levanto el server en el puerto especificado
+// Iniciamos el servidor
+app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });

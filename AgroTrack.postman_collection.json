@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "59209a87-8a38-417e-b250-17e515cf6ace",
+		"name": "AgroTrack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49209507",
+		"_collection_link": "https://ptomatis-7418054.postman.co/workspace/Pablo-Tomatis's-Workspace~bad80f0a-fe00-4eba-8efc-4d76ec4f8f81/collection/49209507-59209a87-8a38-417e-b250-17e515cf6ace?action=share&source=collection_link&creator=49209507"
+	},
+	"item": [
+		{
+			"name": "Inicio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http:\\\\localhost:8888\\",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http:\\\\localhost:8888\\productos.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"productos.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contacto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http:\\\\localhost:8888\\contacto.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"contacto.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http:\\\\localhost:8888\\login.html",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"login.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listado Consultas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/contacto/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"contacto",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ruta Invalida",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/contacto/listame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"contacto",
+						"listame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Server Health",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "API Contactos",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Login Demo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuario",
+							"value": "Juan",
+							"description": "Nombre de Usuario",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1234",
+							"description": "Contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8888/auth/recuperar?usuario=Juan&clave=1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"auth",
+						"recuperar"
+					],
+					"query": [
+						{
+							"key": "usuario",
+							"value": "Juan",
+							"description": "Nombre de Usuario"
+						},
+						{
+							"key": "clave",
+							"value": "1234",
+							"description": "Contraseña"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Consulta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Juan Perez",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jperez@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mensaje",
+							"value": "Hola, necesito un presupuesto por....",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8888/contacto/cargar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"contacto",
+						"cargar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
